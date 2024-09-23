@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <title>点検報告書共通ページ</title>
+  <meta name="description" content="このページは報告書の共通する項目です">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="syoubouchan.css">
+</head>
+
+<body>
+    <!-- 下記は全ページに反映される内容 -->
+    <label>物件名</label>
+    <form name="textForm">
+        <input type="text" name="textBox" placeholder="物件名" size="30">
+      </form>
+    <br>
+
+    <label>住所</label>
+    <form name="textForm">
+        <input type="text" name="textBox" placeholder="住所" size="60">
+      </form>
+      <br>
+
+      <label>点検者</label>
+      <select name="inspector" id="inspector">
+          <option>寺田  恭平</option>
+          <option>寺田  恭平2</option>
+          <option>寺田  恭平3</option>
+        </select>
+        <br>
+        <br>
+        
+        <label>防火管理者</label>
+        <form name="textForm">
+            <input type="text" name="textBox" placeholder="防火管理者" >
+        </form>
+        <br>
+        
+        <label>立合者</label>
+        <form name="textForm">
+            <input type="text" name="textBox" placeholder="立会者" >
+        </form>
+        <br>
+
+        <label>点検会社</label>
+        <select name="repairperson" id="repairperson">
+            <option>富士防災システム</option>
+            <option>クリーンコーポレーション</option>
+            <option>第一防災株式会社</option>
+          </select>
+          <br>
+          <br>
+        <!-- ここまでの情報は全ページに反映される -->
+
+        <!-- ここからは各点検ページに飛ぶ -->
+         <a href="syoukaki.html" class="button">消火器</a>
+        
+    </body>
+    
+    </html>
