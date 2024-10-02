@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>消防設備点検</title>
+    <link rel="stylesheet" href="tenkenhyou.css">
+</head>
+<body>
+    <div class="container">
+        <h1>消防設備点検</h1>
+        <form id="checkForm">
+            <div class="checkbox-group">
+                <label><input type="checkbox" id="extinguisher"> 消火器</label><br>
+                <label><input type="checkbox" id="fireAlarm"> 自動火災報知設備</label><br>
+                <label><input type="checkbox" id="indoorHydrant"> 屋内消火設備</label><br>
+                <label><input type="checkbox" id="powderExtinguisher"> 粉末消火設備</label><br>
+                <label><input type="checkbox" id="broadcast"> 放送設備</label><br>
+                <label><input type="checkbox" id="fireAlarmHousing"> 住宅火災警報器</label><br>
+                <label><input type="checkbox" id="sprinkler"> スプリンクラー設備</label><br>
+                <label><input type="checkbox" id="guidingLights"> 誘導灯及び誘導標式</label><br>
+                <label><input type="checkbox" id="evacuationTools"> 避難器具設備</label><br>
+                <label><input type="checkbox" id="emergencyPower"> 非常電源設備</label><br>
+            </div>
+            <button type="button" id="generateButtons">点検表を生成</button>
+        </form>
+
+        <div id="buttonContainer"></div>
+
+        <!-- PDF/Excel ボタン -->
+        <div class="action-buttons">
+            <button type="button" class="pdf-button">PDF</button>
+            <button type="button" class="excel-button">Excel</button>
+        </div>
+    </div>
+
+    <script src="tenkenhyou.js"></script>
+</body>
+</html>

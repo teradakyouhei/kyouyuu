@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>消防ちゃん（仮）＿物件一覧</title>
+    <link rel="stylesheet" href="syoubouchan.css">
+</head>
+<body>
+
+<div class="header">
+    <h2>消防ちゃん（仮）</h2>
+    <a href="order\order.html" class="button">新規受注作成</a>
+</div>
+
+<table id="propertyTable">
+    <thead>
+        <tr>
+            <th>コード№<br>
+                <input type="text" id="codeSearch" onkeyup="filterTable('codeSearch', 0)" placeholder="検索...">
+            </th>
+            <th>物件名<br>
+                <input type="text" id="nameSearch" onkeyup="filterTable('nameSearch', 1)" placeholder="検索...">
+            </th>
+            <th>得意先名<br>
+                <input type="text" id="companySearch" onkeyup="filterTable('companySearch', 2)" placeholder="検索...">
+            </th>
+            <th>担当営業<br>
+                <input type="text" id="salesSearch" onkeyup="filterTable('salesSearch', 3)" placeholder="検索...">
+            </th>
+            <th>住所<br>
+                <input type="text" id="addressSearch" onkeyup="filterTable('addressSearch', 4)" placeholder="検索...">
+            </th>
+            <th>点検表提出済<br>
+                <input type="text" id="checkSearch" onkeyup="filterTable('checkSearch', 5)" placeholder="検索...">
+            </th>
+            <!-- 項目はまだ増える予定 -->
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>001</td>
+            <td><a href="sanraizumansyon.html" target="_blank">サンライズマンション</a></td>
+            <td>ABC管理会社</td>
+            <td></td>
+            <td>東京都渋谷区</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>002</td>
+            <td><a href="property2.html" target="_blank">グリーンヒルズアパート</a></td>
+            <td>XYZ管理会社</td>
+            <td></td>
+            <td>大阪府大阪市</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>003</td>
+            <td><a href="property3.html" target="_blank">レイクサイドハウス</a></td>
+            <td>DEF管理会社</td>
+            <td></td>
+            <td>北海道札幌市</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- 外部JavaScriptファイルを読み込む -->
+<script src="script.js"></script>
+
+</body>
+</html>

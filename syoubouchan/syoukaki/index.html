@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>消火器具点検票</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>消火器具点検票</h1>
+        <form id="inspection-form">
+            <!-- 納品日からとってくる -->
+            <label for="inspection-date">点検年月日</label>
+            <input type="date" id="inspection-date" name="inspection-date" required>
+            <!-- 受注からとってくる -->
+            <label for="manager-name">防火管理者名</label>
+            <input type="text" id="manager-name" name="manager-name" placeholder="防火管理者名を入力" required>
+            <!-- 受注からとってくる -->
+            <label for="inspector-name">点検者名</label>
+            <input type="text" id="inspector-name" name="inspector-name" placeholder="点検者名を入力" required>
+            <!-- 受注からとってくる -->
+            <label for="company">点検者所属会社</label>
+            <input type="text" id="company" name="company" placeholder="会社名を入力" required>
+            <!-- 受注からとってくる -->
+            <label for="location">所在</label>
+            <input type="text" id="location" name="location" placeholder="所在を入力" required>
+
+            <h2>点検項目と判定</h2>
+
+            <!-- 点検項目と判定の繰り返し -->
+            <div class="inspection-item">
+                <label for="location-condition">設置場所</label>
+                <select id="location-condition" name="location-condition" onchange="handleJudgementChange(this)">
+                    <option value="○">○</option>
+                    <option value="✕">✕</option>
+                </select>
+                <textarea id="remark-location-condition" class="remark" name="remark-location-condition" placeholder="備考" style="display:none"></textarea>
+            </div>
+
+            <!-- 他の項目も同様に繰り返す -->
+            <div class="inspection-item">
+                <label for="installation-interval">設置間隔</label>
+                <select id="installation-interval" name="installation-interval" onchange="handleJudgementChange(this)">
+                    <option value="○">○</option>
+                    <option value="✕">✕</option>
+                </select>
+                <textarea id="remark-installation-interval" class="remark" name="remark-installation-interval" placeholder="備考" style="display:none"></textarea>
+            </div>
+
+            <!-- 同様の項目を必要な数だけ追加 -->
+
+            <button type="submit">送信</button>
+        </form>
+
+        <h2>備考</h2>
+        <div id="remarks-summary"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

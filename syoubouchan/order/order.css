@@ -1,0 +1,156 @@
+/* 全体のレイアウトを画面いっぱいに表示するために追加 */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 背景色を画面全体に適用 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* フォームのコンテナを中央に配置し、画面いっぱいに広げる */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto; /* 中央揃えにする */
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* タイトル */
+h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* 各ラベルと入力欄を画面の90%に表示 */
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type="text"],
+input[type="number"],
+datalist {
+    width: 90%; 
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.1em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type="radio"] {
+    margin-right: 15px;
+    transform: scale(1.2);
+}
+
+/* 点検表作成の項目を左揃えに */
+.checklist-group {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 12px 0;
+}
+
+.checklist-group label {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 1.1em;
+}
+
+.checklist-group input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* ボタンを中央に寄せる */
+.button-group {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* ボタンのスタイル */
+button {
+    padding: 12px 24px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    color: white;
+    cursor: pointer;
+}
+
+.blue {
+    background-color: #007bff;
+}
+
+.green {
+    background-color: #28a745;
+}
+
+.orange {
+    background-color: #fd7e14;
+}
+
+.gray {
+    background-color: #6c757d;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* スマートフォンやタブレット向けのレスポンシブデザイン */
+@media screen and (max-width: 1024px) {
+    .container {
+        width: 95%;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    label, input[type="text"], input[type="number"], datalist {
+        font-size: 1em;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    h1 {
+        font-size: 1.3em;
+    }
+
+    label, input[type="text"], input[type="number"], datalist {
+        font-size: 0.9em;
+    }
+
+    button {
+        width: 100%;
+        font-size: 1em;
+        padding: 8px;
+    }
+}

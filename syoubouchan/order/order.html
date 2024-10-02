@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>消防ちゃん＿受注作成</title>
+    <link rel="stylesheet" href="order.css">
+</head>
+<body>
+    <div class="container">
+        <h1>消防ちゃん＿受注作成</h1>
+        
+        <form id="order-form">
+            <label for="orderNumber">受注№:</label>
+            <input type="text" id="orderNumber" name="orderNumber" readonly><br>
+
+            <label for="projectName">物件名:</label>
+            <input type="text" id="projectName" name="projectName"><br>
+
+            <label for="customerId">得意先名:</label>
+            <input type="text" id="customerId" name="customerId" placeholder="得意先№で検索" list="customer-list"><br>
+            <datalist id="customer-list">
+                <!-- 得意先のデータをここに追加 -->
+            </datalist>
+
+            <label for="salesId">営業担当:</label>
+            <input type="text" id="salesId" name="salesId" placeholder="営業担当№で検索" list="sales-list"><br>
+            <datalist id="sales-list">
+                <!-- 営業担当のデータをここに追加 -->
+            </datalist>
+
+            <label for="address">住所:</label>
+            <input type="text" id="address" name="address"><br>
+
+            <label for="orderAmount">受注金額:</label>
+            <input type="number" id="orderAmount" name="orderAmount"><br>
+
+            <label for="inspectionDone">点検表作成済:</label>
+            <input type="radio" id="inspectionYes" name="inspectionDone" value="yes">○
+            <input type="radio" id="inspectionNo" name="inspectionDone" value="no">✕<br>
+
+            <label for="manager">防火管理者:</label>
+            <input type="text" id="manager" name="manager"><br>
+
+            <label for="supervisor">立会者:</label>
+            <input type="text" id="supervisor" name="supervisor"><br>
+
+            <div class="button-group">
+                <button type="button" id="register" class="blue">登録完了</button>
+                <button type="button" id="createOrderSheet" class="green">受注伝票作成</button>
+                <button type="button" id="createInspectionSheet" class="orange">点検表作成</button>
+                <button type="button" id="goBack" class="gray">戻る</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="order.js"></script>
+</body>
+</html>
